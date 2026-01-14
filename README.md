@@ -78,5 +78,3 @@ The core of the system is a **Branching CNN Model** designed for efficiency (< 1
 The dataset consists of video files located in the `dataset/` directory. The `format_dataset` utility processes these videos, packing consecutive frames into training samples and mapping steering values (dx) into classification labels.
 
 ---
-
-Developed as part of the Autonomous Navigation Simulation project.
