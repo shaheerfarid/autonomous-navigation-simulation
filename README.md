@@ -2,11 +2,11 @@
 
 A modular autonomous driving system that implements a perception-planning-control pipeline for lane detection and steering estimation using deep learning.
 
-## 🚀 Overview
+## Overview
 
 This project simulates an autonomous vehicle's navigation system by processing video footage to predict steering directions. It uses a hybrid branching Convolutional Neural Network (CNN) that captures both spatial features from individual frames and temporal features from sequences of frames.
 
-## 🛠 Features
+## Features
 
 - **Perception-Planning-Control Pipeline**: A standard modular architecture for autonomous systems.
 - **Deep Learning Steering Estimation**: Predicts `left`, `straight`, or `right` based on video sequences.
@@ -15,7 +15,7 @@ This project simulates an autonomous vehicle's navigation system by processing v
   - **Temporal Branch**: Captures motion dynamics over a 5-frame sequence using 3D convolutions.
 - **Modular Codebase**: Organized into `perception`, `planning`, `control`, `learning`, and `utils`.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── dataset/                # Video files (.MOV) for training and testing
@@ -31,7 +31,7 @@ This project simulates an autonomous vehicle's navigation system by processing v
 └── run.py                  # Main entry point for training and evaluation
 ```
 
-## ⚙️ Installation
+## Installation
 
 1. **Clone the repository**:
 
@@ -47,7 +47,7 @@ This project simulates an autonomous vehicle's navigation system by processing v
    ```
    _(Note: Ensure `keras`, `tensorflow`, `numpy`, `matplotlib`, `scikit-learn`, and `opencv-python` are installed.)_
 
-## 🚀 Usage
+## Usage
 
 ### Training the Model
 
@@ -64,7 +64,7 @@ The script will:
 3. Save the trained model as `autonomous-navigation-simulation.keras`.
 4. Run predictions on test instances and display the results.
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The core of the system is a **Branching CNN Model** designed for efficiency (< 10M parameters):
 
@@ -73,7 +73,7 @@ The core of the system is a **Branching CNN Model** designed for efficiency (< 1
 - **Temporal Branch (3D CNN)**: Processes the full 5-frame sequence to understand the vehicle's trajectory and motion.
 - **Merge & Classification**: The features are concatenated and passed through dense layers to output probabilities for 3 classes: `left`, `straight`, and `right`.
 
-## 📊 Dataset
+## Dataset
 
 The dataset consists of video files located in the `dataset/` directory. The `format_dataset` utility processes these videos, packing consecutive frames into training samples and mapping steering values (dx) into classification labels.
 
